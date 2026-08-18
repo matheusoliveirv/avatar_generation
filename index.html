@@ -340,13 +340,13 @@
     
     // 1. Faixa azul na parte inferior
     ctx.fillStyle = 'rgba(0, 71, 171, 0.95)'; 
-    ctx.fillRect(0, 700, 1080, 380);
+    ctx.fillRect(0, 750, 1080, 380);
 
     // 2. Imagem da candidata
     if (candidateImg.complete && candidateImg.naturalWidth !== 0) {
       // Ajuste estes 4 valores (X, Y, Largura, Altura) conforme o tamanho do seu arquivo PNG
       // Neste exemplo, posicionei à esquerda e sobrepondo um pouco a faixa azul
-      ctx.drawImage(candidateImg, 20, 356, 360, 360); 
+      ctx.drawImage(candidateImg, 20, 406, 360, 360); 
     }
 
     // 3. Textos
@@ -355,17 +355,17 @@
     // NOME 
     ctx.fillStyle = '#FFFFFF';
     ctx.font = '900 80px Arial';
-    ctx.fillText('LAIR MOURA', 540, 790);
+    ctx.fillText('LAIR MOURA', 540, 835);
 
     // CARGO 
     ctx.fillStyle = '#FFFFFF';
     ctx.font = '700 45px Arial';
-    ctx.fillText('DEPUTADA FEDERAL', 540, 860);
+    ctx.fillText('DEPUTADA FEDERAL', 540, 895);
 
     // NÚMERO 
     ctx.fillStyle = '#FFD700'; 
     ctx.font = '900 110px Arial';
-    ctx.fillText('2256', 540, 980);
+    ctx.fillText('2256', 540, 1000);
     
     ctx.restore();
 
