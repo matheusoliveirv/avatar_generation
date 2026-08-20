@@ -90,6 +90,9 @@
       touch-action: none;
       box-shadow: 0 0 0 4px #dce3eb;
     }
+    .stage.ativo {
+      touch-action: none;
+    }
     canvas {
       display: block;
       width: 100%;
@@ -407,6 +410,7 @@
   }
 
   choose.onclick = () => file.click();
+  stage.onclick = () => { if (!img) file.click(); };
   
   file.onchange = e => {
     let f = e.target.files[0];
@@ -418,6 +422,7 @@
       empty.hidden = true;
       controls.hidden = false;
       choose.textContent = 'TROCAR MINHA FOTO';
+      stage.classList.add('ativo'); /* <-- ADICIONE ESTA LINHA AQUI */
       URL.revokeObjectURL(u);
     };
     i.src = u;
